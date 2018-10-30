@@ -1,5 +1,4 @@
-﻿using System;
-using System.Data.Common;
+﻿using System.Data.Common;
 using System.Linq;
 
 namespace System.Data.SQLite.EF6.Migrations.Test.Model01
@@ -12,7 +11,7 @@ namespace System.Data.SQLite.EF6.Migrations.Test.Model01
             {
                 Console.WriteLine(context.Entities.Count());
 
-                context.Dependants.Add(new Dependant() {Description = "Dependant description", MainEntity = new EF6.Migrations.Test.Model01.Entity() {Description = "Entity description"}});
+                context.Dependants.Add(new Dependant {Description = "Dependant description", MainEntity = new Entity {Description = "Entity description"}});
                 context.SaveChanges();
 
             }
